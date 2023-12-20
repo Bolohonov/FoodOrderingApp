@@ -1,15 +1,20 @@
-server:
-  port: 8081
-
-topic:
-  name: ${TOPIC_NAME}
-
 spring:
+  application:
+    name: food-ordering-consumer
   kafka:
+    bootstrap-servers: host.docker.internal:29092
+    listener:
+      ack-mode: record
+    producer:
+      client-id: ${spring.application.name}
     consumer:
-      group-id: "default"
-
+      group-id: ${spring.application.name}
+      autoOffsetReset: earliest
   datasource:
     url: ${SPRING_DATASOURCE_URL}
     username: ${POSTGRES_USER}
     password: ${POSTGRES_PASSWORD}
+
+kafka:
+  topics:
+    test-topic: topic1

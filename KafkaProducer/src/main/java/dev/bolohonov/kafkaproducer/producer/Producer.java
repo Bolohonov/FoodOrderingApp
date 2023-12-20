@@ -13,7 +13,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class Producer {
 
-    @Value("${topic.name}")
+    @Value("${kafka.topics.test-topic}")
     private String orderTopic;
 
     private final ObjectMapper objectMapper;

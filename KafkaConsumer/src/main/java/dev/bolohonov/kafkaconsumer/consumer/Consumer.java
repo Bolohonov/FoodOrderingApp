@@ -13,7 +13,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class Consumer {
 
-    private static final String orderTopic = "${topic.name}";
+    private static final String orderTopic = "${kafka.topics.test-topic}";
 
     private final ObjectMapper objectMapper;
     private final FoodOrderService foodOrderService;

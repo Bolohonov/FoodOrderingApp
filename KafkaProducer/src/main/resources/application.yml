@@ -1,5 +1,7 @@
-server:
-  port: 8080
+spring:
+  kafka:
+    bootstrap-servers: host.docker.internal:29092
 
-topic:
-  name: ${TOPIC_NAME}
+kafka:
+  topics:
+    test-topic: topic1
