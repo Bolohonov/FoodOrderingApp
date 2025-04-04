@@ -2,7 +2,7 @@
 
 Сервис на SpringBoot с Kafka, БД - PostgreSQL. 
 
-Для запуска сервиса необходимо выполнить для модулейц KafkaConsumer и KafkaProducer:  
+Для запуска сервиса необходимо выполнить для модулей KafkaConsumer и KafkaProducer:  
 mvn clean package
 
 После завершения работы maven при запущенном Docker ввести команду:   
